@@ -2,14 +2,6 @@
  * Tester *
  ***************/
 
-import { core, data, sound, util, visual, hardware } from './lib/psychojs-2024.2.4.js';
-const { PsychoJS } = core;
-const { TrialHandler, MultiStairHandler } = data;
-const { Scheduler } = util;
-//some handy aliases as in the psychopy scripts;
-const { abs, sin, cos, PI: pi, sqrt } = Math;
-const { round } = util;
-
 
 // store info about the experiment session:
 let expName = 'Tester';  // from the Builder filename that created this script
@@ -725,14 +717,15 @@ function Trial_1LoopBegin(Trial_1LoopScheduler, snapshot) {
     currentLoop = Trial_1;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisTrial_1 of Trial_1) {
+    Trial_1.forEach(function() {
       snapshot = Trial_1.getSnapshot();
+    
       Trial_1LoopScheduler.add(importConditions(snapshot));
       Trial_1LoopScheduler.add(trialRoutineBegin(snapshot));
       Trial_1LoopScheduler.add(trialRoutineEachFrame());
       Trial_1LoopScheduler.add(trialRoutineEnd(snapshot));
       Trial_1LoopScheduler.add(Trial_1LoopEndIteration(Trial_1LoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -847,9 +840,10 @@ function trialRoutineBegin(snapshot) {
     trialComponents.push(y);
     trialComponents.push(mouse_2);
     
-    for (const thisComponent of trialComponents)
+    trialComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -1346,11 +1340,11 @@ function trialRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of trialComponents)
+    trialComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -1365,11 +1359,11 @@ function trialRoutineEachFrame() {
 function trialRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'trial' ---
-    for (const thisComponent of trialComponents) {
+    trialComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('trial.stopped', globalClock.getTime());
     Black_Screen.stop();  // ensure movie has stopped at end of Routine
     Noisy_1.stop();  // ensure movie has stopped at end of Routine
@@ -1447,9 +1441,10 @@ function GoodbyeRoutineBegin(snapshot) {
     GoodbyeComponents = [];
     GoodbyeComponents.push(ExitText);
     
-    for (const thisComponent of GoodbyeComponents)
+    GoodbyeComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -1483,11 +1478,11 @@ function GoodbyeRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of GoodbyeComponents)
+    GoodbyeComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -1502,11 +1497,11 @@ function GoodbyeRoutineEachFrame() {
 function GoodbyeRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'Goodbye' ---
-    for (const thisComponent of GoodbyeComponents) {
+    GoodbyeComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('Goodbye.stopped', globalClock.getTime());
     // the Routine "Goodbye" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
