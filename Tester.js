@@ -108,6 +108,7 @@ psychoJS.start({
     {'name': 'Y.jpg', 'path': 'Y.jpg'},
     {'name': 'My Movie.mp4', 'path': 'My Movie.mp4'},
     {'name': 'Noisy_90.mp4', 'path': 'Noisy_90.mp4'},
+    {'name': 'Test_book.xlsx', 'path': 'Test_book.xlsx'},
   ]
 });
 
