@@ -65,7 +65,7 @@ psychoJS.start({
   expInfo: expInfo,
   resources: [
     // resources:
-    {'name': '90_1_Elbow_Circle_Down24.mp4', 'path': '90_1_Elbow_Circle_Down24.mp4'}
+    {'name': '90_1_Elbow_Circle_Down24.mp4', 'path': '90_1_Elbow_Circle_Down24.mp4'},
     {'name': '90_4_Elbow_Circle_Forward22.mp4', 'path': '90_4_Elbow_Circle_Forward22.mp4'},
     {'name': '90_5_Neutral_Twist_Forward1.mp4', 'path': '90_5_Neutral_Twist_Forward1.mp4'},
     {'name': '90_Adducted_5_Mouth_Twist_Down12.mp4', 'path': '90_Adducted_5_Mouth_Twist_Down12.mp4'},
