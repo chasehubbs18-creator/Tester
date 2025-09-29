@@ -70,6 +70,7 @@ psychoJS.start({
     {'name': '90_5_Neutral_Twist_Forward1.mp4', 'path': '90_5_Neutral_Twist_Forward1.mp4'},
     {'name': '90_Adducted_5_Mouth_Twist_Down12.mp4', 'path': '90_Adducted_5_Mouth_Twist_Down12.mp4'},
     {'name': '90_Curved_V_Elbow_Twist_Down23.mp4', 'path': '90_Curved_V_Elbow_Twist_Down23.mp4'}, 
+    {'name': '1_ulnar.jpg', 'path': '1_ulnar.jpg'},
     {'name': '1.jpg', 'path': '1.jpg'},
     {'name': '3.jpg', 'path': '3.jpg'},
     {'name': '4.jpg', 'path': '4.jpg'},
