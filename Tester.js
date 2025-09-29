@@ -185,12 +185,12 @@ var y;
 var mouse_2;
 var Black_ScreenClock;
 var Black_Screen;
-var Noisy_1Clock;
-var Noisy_1;
+var _1Clock;
+var _1;
 var HS_vidsClock;
 var HS_vids;
-var Noisy_2Clock;
-var Noisy_2;
+var _2Clock;
+var _2;
 var GoodbyeClock;
 var ExitText;
 var globalClock;
@@ -845,9 +845,9 @@ function trialRoutineBegin(snapshot) {
     mouse_2.clicked_name = [];
     gotValidClick = false; // until a click is received
     Black_Screen.setMovie('My Movie.mp4');
-    Noisy_1.setMovie('Noisy_Black_Screen_90.mp4');
+    Noisy_1.setMovie('Noisy_90.mp4');
     HS_vids.setMovie(HS_VIDS);
-    Noisy_2.setMovie('Noisy_Black_Screen_90.mp4');
+    Noisy_2.setMovie('Noisy_90.mp4');
     psychoJS.experiment.addData('trial.started', globalClock.getTime());
     trialMaxDuration = null
     // keep track of which components have finished
